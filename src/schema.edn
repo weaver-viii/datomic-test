@@ -1,0 +1,36 @@
+[{:db/ident :game/name
+  :db/doc "Game name"
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+
+ {:db/ident :game/username
+  :db/doc "Name of user playing a game"
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+
+ {:db/ident :game/level
+  :db/doc "Game level"
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/string
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+
+ {:db/ident :game/score
+  :db/doc "User's score for a game"
+  :db/id #db/id[:db.part/db]
+  :db/valueType :db.type/long
+  :db/cardinality :db.cardinality/one
+  :db.install/_attribute :db.part/db}
+
+{
+  :db/id #db/id[:db.part/user]
+  :game/name "Tetris"
+  :game/username "onetom"
+  :game/level "1"
+  :game/score 123
+  }
+]

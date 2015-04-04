@@ -1,0 +1,15 @@
+(page "index.html"
+  (:require
+    [datomic-test.rpc :as rpc]
+    [tailrecursion.hoplon.reload :refer [reload-all]]))
+
+(reload-all 1000)
+
+(rpc/init)
+
+(html
+  (head)
+  (body
+    (h1 :text "Hello, Hoplon and Castra!")
+    (loop-tpl :bindings [a rpc/random-number]
+    	(pre :text a))))
